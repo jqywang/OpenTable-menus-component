@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-class TestApp extends React {
+class TestApp extends React.Component {
     constructor(props){
         super(props);
     }
@@ -10,4 +10,4 @@ class TestApp extends React {
         );
     }
 }
-ReactDOM.render(<TestApp/>, document.findElementById('app'));
+ReactDOM.render(<TestApp/>, document.getElementById('app'));
