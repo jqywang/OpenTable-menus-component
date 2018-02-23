@@ -14,5 +14,12 @@ describe('test the fact that the database is seeded', () => {
             expect(data.length).toBe(58);
         });
     });
+    test('has a function that pulls specific menus from db by restaurant id', () => {
+        dbHelper.pullRestaurantFromDB('1', (err, data) => {
+            if(err){throw err;}
+            expect(data.length).toBe(29);
+            expect(data[0].restaurant_id).toBe('1');
+        })
+    });
 })
 

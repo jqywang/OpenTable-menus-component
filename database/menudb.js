@@ -28,6 +28,10 @@ let saveIntoDB = function (entryObj) {
 };
 let pullFromDB = function(callback) {
     Entry.find().exec(callback);
+};
+let pullRestaurantFromDB = function (restaurantID, callback) {
+    Entry.find({restaurant_id: restaurantID}).exec(callback);
 }
 module.exports.saveIntoDB = saveIntoDB;
 module.exports.pullFromDB = pullFromDB;
+module.exports.pullRestaurantFromDB = pullRestaurantFromDB;
