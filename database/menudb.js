@@ -10,7 +10,8 @@ let entrySchema = mongoose.Schema({
     entry_desc: String,
     entry_price: String,
     extras_name: String,
-    extras_price: String
+    extras_price: String,
+    restaurant_id: Number
 });
 let Entry = mongoose.model('Entry', entrySchema);
 
