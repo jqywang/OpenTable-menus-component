@@ -1,7 +1,6 @@
-import { mongo } from 'mongoose';
-
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/menus');
+
+mongoose.connect('mongodb://localhost/entries');
 let entrySchema = mongoose.Schema({
     menu_name: String,
     subgroup_name: String,
@@ -26,4 +25,9 @@ let saveIntoDB = function (entryObj) {
             console.log('successfully put into the goddamn db bb');
         }
     });
+};
+let pullFromDB = function(callback) {
+    Entry.find().exec(callback);
 }
+module.exports.saveIntoDB = saveIntoDB;
+module.exports.pullFromDB = pullFromDB;
