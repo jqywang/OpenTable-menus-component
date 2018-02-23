@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './style.css';
 class TestApp extends React.Component {
     constructor(props){
         super(props);
