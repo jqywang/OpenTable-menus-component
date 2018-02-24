@@ -16,6 +16,10 @@ const dataRestructure = (objArr) => {
       name: objArr[i].entry_name,
       price: objArr[i].entry_price,
       desc: objArr[i].entry_desc,
+      extras: {
+        price: objArr[i].extras_price,
+        name: objArr[i].extras_name
+      }
     };
     subGroupObj.entries.push(entryObj);
   }
