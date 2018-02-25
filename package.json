@@ -12,6 +12,10 @@
     "dev-react": "webpack -d --watch",
     "test": "jest"
   },
+  "jest": {
+    "setupFiles": ["./src/jest-setup.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
+  },
   "dependencies": {
     "babel-core": "^6.26.0",
     "body-parser": "^1.18.2",
