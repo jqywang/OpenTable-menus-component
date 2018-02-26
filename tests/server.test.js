@@ -28,6 +28,8 @@ describe('server should serve correct responses', () => {
     request.get('http://localhost:3000/api/menus/2', (err, response) => {
       if (err) { throw err; }
       expect(typeof JSON.parse(response.body).Dinner.Appetizers.entries[0]).toBe('object');
+      expect(JSON.parse(response.body).Dinner.Appetizers.entries[0].name).toBe('artichoke');      
+      expect(JSON.parse(response.body).Dinner.Appetizers.entries[0].price).toBe('$27.00');            
       expect(JSON.parse(response.body).Dinner.Appetizers.subgroup_desc).toBe('add cheese for $1.00');
     });
   });
