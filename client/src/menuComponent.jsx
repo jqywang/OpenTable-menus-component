@@ -3,19 +3,33 @@ import React from 'react';
 class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
+    let firstMenuName = Object.keys(this.props.menus)[0];
+    let firstMenu = this.props.menus[firstMenuName];
     this.state = {
-      menuArray: this.props.menus,
-      currentMenu: this.props.menus[0];
+      currentMenu: firstMenu,
+      currentMenuName: firstMenuName
     }
   }
   handleClick(menuName) {
-    for(let i = 0; i < this.state.menuArray; i++) {
-      for(let key in this.state.menus) {
-        if(key === menuName) {
-          this.setState()
-        }
+    let keyArray = Object.keys(this.props.menus);
+    for (let i = 0; i < keyArray.length; i++) {
+      if (keyArray[i] === menuName) {
+        this.setState({
+          currentMenu: this.props[keyArray[i]],
+          currentMenuName: keyArray[i],
+        })
       }
     }
+  }
+  render() {
+    return (
+      <div>
+        {Object.keys(this.props.menus).map((menuName) =>
+          <button key = {menuName} onClick = {() => {this.handleClick(menuName)}}>{menuName}</button>
+        )}
+        <h2>{this.state.currentMenuName}</h2>
+      </div>
+    )
   }
 }
 
