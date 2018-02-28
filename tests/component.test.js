@@ -13,11 +13,11 @@ const fake = {
 const wrapper = global.shallow(<MenuComponent menus = {fake}/>);
 describe('menu should show correct things', () => {
   expect(wrapper.is('div')).toEqual(true);
-  expect(wrapper.find('button')).to.have.length(2);
+  expect(wrapper.find('button').length).toBe(2);
 });
 
 describe('menu buttons should change state', () => {
-  it('should change state if button is pressed' () => {
+  it('should change state if button is pressed', () => {
     const dinnerButton = wrapper.find('button').at(0);
     const lunchButton = wrapper.find('button').at(1);
     dinnerButton.simulate('click');
