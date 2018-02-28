@@ -38,6 +38,9 @@ var config = {
       }
     ]
   },
+  resolve: {
+    extensions: [".js", ".json", ".jsx"]
+  },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js'

@@ -23,4 +23,4 @@ class TestApp extends React.Component {
         );
     }
 }
-ReactDOM.render(<TestApp />, document.getElementById('app'));
+export default ReactDOM.render(<TestApp />, document.getElementById('app'));
