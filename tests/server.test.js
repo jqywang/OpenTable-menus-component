@@ -13,6 +13,7 @@ describe('server should serve correct responses', () => {
       if (err) { throw err; }
       expect(response.statusCode).toBe(200);
       expect(typeof JSON.parse(response.body)).toBe('object');
+      expect(2).toEqual(1);
     });
   });
 
