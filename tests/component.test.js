@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MenuApp from '../client/src/index';
+
 import MenuComponent from '../client/src/menuComponent';
 
 import EntryComponent from '../client/src/entryComponent';
@@ -25,6 +27,14 @@ describe('menu component', () => {
     expect(wrapper.state().currentMenuName).toBe('Lunch');
   });
   it('should pass props onto subgroup component', () => {
-    //expect(wrapper.find()).toBe('yes');
+    expect(wrapper.find(SubgroupComponent).props).toBe('yes');
+  });
+});
+
+describe('MenuApp component', () => {
+  const wrapper = global.shallow(<MenuApp restaurant = '2'/>);
+  it('should pass appropriate things into MenuComponent', () => {
+    let propsThing = wrapper.find(MenuComponent).props;
+    expect(wrapper.type()).toBe('div');
   });
 });

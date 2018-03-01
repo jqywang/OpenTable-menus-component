@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SubgroupComponent from './subgroupComponent';
+
 class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +30,7 @@ class MenuComponent extends React.Component {
           <button key = {menuName} onClick={() => {this.handleClick(menuName)}}>{menuName}</button>
         )}
         <h2>{this.state.currentMenuName}</h2>
+        {}
       </div>
     )
   }

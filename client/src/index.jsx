@@ -12,7 +12,7 @@ const fakeData = {
   Something: 'dinner hehe',
 };
 
-class TestApp extends React.Component {
+class MenuApp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,4 +41,5 @@ class TestApp extends React.Component {
     );
   }
 }
-export default ReactDOM.render(<TestApp restaurant="2" />, document.getElementById('app'));
+ReactDOM.render(<MenuApp restaurant="2" />, document.getElementById('app'));
+export default MenuApp;
