@@ -6,7 +6,7 @@ import EntryComponent from '../client/src/entryComponent';
 
 import SubgroupComponent from '../client/src/subgroupComponent';
 
-describe('menu buttons should change state', () => {
+describe('menu component', () => {
   const fake = {
     Dinner: 'yes',
     Lunch: 'also yes'
@@ -23,5 +23,8 @@ describe('menu buttons should change state', () => {
     expect(wrapper.state().currentMenuName).toBe('Dinner');
     lunchButton.simulate('click');
     expect(wrapper.state().currentMenuName).toBe('Lunch');
+  });
+  it('should pass props onto subgroup component', () => {
+    //expect(wrapper.find()).toBe('yes');
   });
 });
