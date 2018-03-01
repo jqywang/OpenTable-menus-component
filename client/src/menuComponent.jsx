@@ -3,12 +3,12 @@ import React from 'react';
 class MenuComponent extends React.Component {
   constructor(props) {
     super(props);
-    let firstMenuName = Object.keys(this.props.menus)[0];
-    let firstMenu = this.props.menus[firstMenuName];
+    let firstMenuName = Object.keys(props.menus)[0];
+    let firstMenu = props.menus[firstMenuName];
     this.state = {
       currentMenu: firstMenu,
-      currentMenuName: firstMenuName
-    }
+      currentMenuName: firstMenuName,
+    };
   }
   handleClick(menuName) {
     let keyArray = Object.keys(this.props.menus);
@@ -25,7 +25,7 @@ class MenuComponent extends React.Component {
     return (
       <div>
         {Object.keys(this.props.menus).map((menuName) =>
-          <button key = {menuName} onClick = {() => {this.handleClick(menuName)}}>{menuName}</button>
+          <button key = {menuName} onClick={() => {this.handleClick(menuName)}}>{menuName}</button>
         )}
         <h2>{this.state.currentMenuName}</h2>
       </div>
