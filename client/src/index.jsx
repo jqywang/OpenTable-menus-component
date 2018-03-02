@@ -41,5 +41,4 @@ class MenuApp extends React.Component {
     );
   }
 }
-ReactDOM.render(<MenuApp restaurant="2" />, document.getElementById('app'));
-export default MenuApp;
+export default ReactDOM.render(<MenuApp restaurant="2" />, document.getElementById('app'));

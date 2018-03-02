@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MenuApp from '../client/src/index';
+// import MenuApp from '../client/src/index';
 
 import MenuComponent from '../client/src/menuComponent';
 
@@ -31,10 +31,10 @@ describe('menu component', () => {
   });
 });
 
-describe('MenuApp component', () => {
-  const wrapper = global.shallow(<MenuApp restaurant = '2'/>);
-  it('should pass appropriate things into MenuComponent', () => {
-    let propsThing = wrapper.find(MenuComponent).props;
-    expect(wrapper.type()).toBe('div');
-  });
-});
+// describe('MenuApp component', () => {
+//   const wrapper = global.shallow(<MenuApp restaurant = '2'/>);
+//   it('should pass appropriate things into MenuComponent', () => {
+//     let propsThing = wrapper.find(MenuComponent).props;
+//     expect(wrapper.type()).toBe('div');
+//   });
+// });
