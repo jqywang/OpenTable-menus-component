@@ -2,15 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style.css';
 import EntryComponent from './entryComponent.jsx';
+import MenuComponent from './menuComponent.jsx';
 
 const fakeData = {
-    name: 'food',
-    price: '20 bux',
-    desc: 'lots of tasty',
-    extras: {
-        name: 'more food',
-        price: '10 bux',
-    }
+    Dinner: 'something',
+    Lunch: 'something else',
+    Breakfast: "something again entirely",
+    Something: 'dinner hehe'
 };
 
 class TestApp extends React.Component {
@@ -20,9 +18,9 @@ class TestApp extends React.Component {
     render(){
         return (
             <div className='entryComponent' >
-                <EntryComponent entry = {fakeData} />
+                <MenuComponent menus = {fakeData} />
             </div>
         );
     }
 }
-ReactDOM.render(<TestApp />, document.getElementById('app'));
+export default ReactDOM.render(<TestApp />, document.getElementById('app'));
