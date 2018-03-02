@@ -1,17 +1,18 @@
 import React from 'react';
-import EntryComponent from './entryComponent.jsx';
+import EntryComponent from './entryComponent';
 
-const SubgroupComponent = (props) => {
-  return (
+const SubgroupComponent = ({name, subgroup}) => {
+    return (
     <div>
-      <h3>{props.name}</h3>
+      <h3>{name}</h3>
+      <h4>{subgroup.subgroup_desc}</h4>
       {
-        props.entries.map((entry) => {
-          <EntryComponent entry = {entry}/>
+        subgroup.entries.map((entry) => {
+          return (<EntryComponent entry = {entry}/>)
         })
       }
     </div>
-  );
+    );
 };
 
 export default SubgroupComponent;

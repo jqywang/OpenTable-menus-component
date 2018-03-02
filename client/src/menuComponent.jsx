@@ -17,20 +17,23 @@ class MenuComponent extends React.Component {
     for (let i = 0; i < keyArray.length; i++) {
       if (keyArray[i] === menuName) {
         this.setState({
-          currentMenu: this.props[keyArray[i]],
+          currentMenu: this.props.menus[keyArray[i]],
           currentMenuName: keyArray[i],
         })
       }
     }
   }
   render() {
+    console.log(this.state);
     return (
       <div>
         {Object.keys(this.props.menus).map((menuName) =>
-          <button key = {menuName} onClick={() => {this.handleClick(menuName)}}>{menuName}</button>
+          <button key={menuName} onClick={() => {this.handleClick(menuName)}}>{menuName}</button>
         )}
         <h2>{this.state.currentMenuName}</h2>
-        {}
+        {Object.keys(this.state.currentMenu).map((subgroupName) => 
+          <SubgroupComponent name={subgroupName} subgroup={this.state.currentMenu[subgroupName]} />
+        )}
       </div>
     )
   }
