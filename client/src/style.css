@@ -23,20 +23,48 @@ button {
 }
 
 .title{
+  padding-bottom: 1rem;
   border-bottom: 1px solid rgb(75, 75, 75);
 }
 .allEntries {
   columns: 2;
   column-gap: 1rem;
+  column-width: 40%;
 }
 .entryInfo{
   font-weight: bold;
+  size: auto;
+  margin: 0rem;
 }
-.entryInfo .name {
-  color: red;
+.clarity{
+  clear: both;
 }
-.entryInfo .price {
-  color: blue;
+
+.entryContainer {
+  display: block;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  padding: 0.5rem 0.2rem;
+}
+
+.price, .extrasPrice {
+  display: inline-block;
+  float: right;
+}
+
+.extrasName {
+  margin-left: 4px;
+  padding: 4px 5px;
+  border-left: solid 1px black;
+}
+
+.name, .extrasName {
+  display: inline-block;
+}
+.entryDesc {
+  margin: 0px;
+  size: auto;
 }
 button:focus{
   outline: none;
