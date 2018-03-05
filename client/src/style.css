@@ -69,13 +69,16 @@ button {
   margin-bottom: 0.5rem;
   size: auto;
 }
-button:focus{
+.menuButton:focus{
   outline: none;
   border: 2px solid red;
 }
 
 button:hover{ 
   border: 2px solid red;
+}
+.collapseButton:focus{
+  outline: none;
 }
 
 .collapseButton {
@@ -104,7 +107,7 @@ button:hover{
   position: relative;
 }
 .subgroup {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
   font-size: 15px;

@@ -48,7 +48,7 @@ class MenuComponent extends React.Component {
       }>
         <div className= "buttons">
           {Object.keys(this.props.menus).map(menuName =>
-          <button key={menuName} onClick={() => { this.handleClick(menuName); }}>{menuName}</button>)}
+          <button key={menuName} className= "menuButton" onClick={() => { this.handleClick(menuName); }}>{menuName}</button>)}
         </div>
         {Object.keys(this.state.currentMenu).map(subgroupName =>
           <SubgroupComponent name={subgroupName} subgroup={this.state.currentMenu[subgroupName]} />)}
