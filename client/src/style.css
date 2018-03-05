@@ -1,17 +1,18 @@
 html {
-  font-family: brandon-grotesque, sans-serif;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   font-style: normal;
-  margin-left: 28%;
+  margin-left: 30%;
   margin-top: 5%;
-  margin-right: 28%;
+  margin-right: 30%;
 }
 
 button {
   border: 2px solid lightgrey;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: .75rem 1rem;
   margin-right: 1rem;
-  background-color:whitesmoke;
+  background-color:white;
+  cursor: pointer;
 }
 
 .buttons{
@@ -20,6 +21,7 @@ button {
   flex-wrap: wrap;
   justify-content: flex-start;
   padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
 }
 
 .title{
@@ -54,8 +56,6 @@ button {
   float: right;
 }
 
-
-
 .extrasName {
   margin-left: 4px;
   padding: 4px 5px;
@@ -78,9 +78,35 @@ button:hover{
   border: 2px solid red;
 }
 
+.collapseButton {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
+.gradient{
+  content: " ";
+  z-index: 10;
+  display: block;
+  text-align: center;
+  position: absolute;
+  height: 200px;
+  left: 0;
+  bottom: 3rem;
+  width: 100%;
+  background-image: -ms-linear-gradient(top,hsla(0,0%,100%,0),#fff);
+  background-image: -moz-linear-gradient(top,hsla(0,0%,100%,0),#fff);
+  background-image: -o-linear-gradient(top,hsla(0,0%,100%,0),#fff);
+  background-image: -webkit-linear-gradient(top,hsla(0,0%,100%,0),#fff);
+  background-image: linear-gradient(0deg,#fff,hsla(0,0%,100%,0));
+  background-color: hsla(0,0%,100%,.2);
+}
+.menuContainer {
+  position: relative;
+}
 .subgroup {
-  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
   padding-bottom: 1rem;
+  margin-bottom: 1rem;
   font-size: 15px;
 }
 .hidden {

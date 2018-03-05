@@ -41,19 +41,23 @@ class MenuComponent extends React.Component {
   render() {
     console.log(this.state);
     return (
-      <div>
+      <div className="menuContainer">
       <div
       className={
         this.state.hidden ? 'hidden' : 'active'
       }>
         <div className= "buttons">
           {Object.keys(this.props.menus).map(menuName =>
-          <button key={menuName} onClick={() => { this.handleClick(menuName); }}>{menuName}</button>,)}
+          <button key={menuName} onClick={() => { this.handleClick(menuName); }}>{menuName}</button>)}
         </div>
         {Object.keys(this.state.currentMenu).map(subgroupName =>
-          <SubgroupComponent name={subgroupName} subgroup={this.state.currentMenu[subgroupName]} />,)}
+          <SubgroupComponent name={subgroupName} subgroup={this.state.currentMenu[subgroupName]} />)}
       </div>
-      <button onClick={this.collapseMenu.bind(this)}>{this.state.buttonName}</button>      
+      <div 
+      className={
+        this.state.hidden ? 'gradient' : ''
+      }></div>                     
+        <button onClick={this.collapseMenu.bind(this)} className="collapseButton">{this.state.buttonName}</button>
       </div>
     );
   }

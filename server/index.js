@@ -14,5 +14,5 @@ app.use(bodyparser.json());
 app.use('/api/menus', menuRouter);
 
 app.listen(3000, () => {
-  console.log('listening on 3000 man');
+  console.log('listening on port 3000');
 });
