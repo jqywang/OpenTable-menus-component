@@ -83,3 +83,7 @@ button:hover{
   padding-bottom: 1rem;
   font-size: 15px;
 }
+.hidden {
+  height: 450px;
+  overflow: hidden;
+}
