@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/entries');
+//mongoose.connect('mongodb://localhost/entries');
+mongoose.connect('mongodb://mongo:27017/entries');
+
 const entrySchema = mongoose.Schema({
   menu_name: String,
   subgroup_name: String,

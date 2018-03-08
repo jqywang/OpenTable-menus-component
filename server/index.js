@@ -13,6 +13,6 @@ app.use(cors());
 app.use(bodyparser.json());
 app.use('/api/menus', menuRouter);
 
-app.listen(3000, () => {
-  console.log('listening on port 3000');
+app.listen(8000, () => {
+  console.log('listening on port 8000');
 });

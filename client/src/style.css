@@ -83,7 +83,7 @@ button:hover{
 .collapseButton {
   display: block;
   margin: 0 auto;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .gradient{
   content: " ";
@@ -93,7 +93,7 @@ button:hover{
   position: absolute;
   height: 200px;
   left: 0;
-  bottom: 3rem;
+  bottom: 5.9rem;
   width: 100%;
   background-image: -ms-linear-gradient(top,hsla(0,0%,100%,0),#fff);
   background-image: -moz-linear-gradient(top,hsla(0,0%,100%,0),#fff);
@@ -104,6 +104,9 @@ button:hover{
 }
 .menuContainer {
   position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 1rem;
 }
 .subgroup {
   border-bottom: 1px solid lightgray;

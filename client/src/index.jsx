@@ -21,8 +21,10 @@ class MenuApp extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get(`http://localhost:3000/api/menus/${this.props.restaurant}`)
+    console.log('component did mount');
+    axios.get(`/api/menus/${this.props.restaurant}`)
       .then((res) => {
+        console.log('getting it :)');
         const restaurantMenus = res.data;
         const restaurantName = Object.keys(restaurantMenus)[0];
         this.setState({
@@ -36,9 +38,12 @@ class MenuApp extends React.Component {
     }
     return (
       <div className="entryComponent" >
+      <h2 className="title">Menu</h2>
         <MenuComponent menus={this.state.menus} />
       </div>
     );
   }
 }
-export default ReactDOM.render(<MenuApp restaurant="2" />, document.getElementById('app'));
+//ReactDOM.render(<MenuApp restaurant="2" />, document.getElementById('app'));
+window.MenuApp = MenuApp;
+export default MenuApp;
