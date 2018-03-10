@@ -1,6 +1,13 @@
 import React from 'react';
 
 const EntryComponent = ({entry}) => {
+  let extrasComponent = <div></div>
+  if(entry.extras.name) {
+    extrasComponent = <div className="extras">
+      <div className="extrasName">{entry.extras.name}</div>
+      <div className="extrasPrice">{entry.extras.price}</div>
+    </div>
+  }
   return (
   <span className='entryContainer'>
     <div className='entryInfo'>
@@ -9,10 +16,7 @@ const EntryComponent = ({entry}) => {
     </div>
     <div className='clarity'> </div>
     <p className='entryDesc'> {entry.desc} </p>
-    <div className="extras">
-      <div className="extrasName">{entry.extras.name}</div>
-      <div className="extrasPrice">{entry.extras.price}</div>
-    </div>
+    {extrasComponent}
   </span>
   );
 };

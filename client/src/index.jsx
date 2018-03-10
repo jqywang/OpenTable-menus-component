@@ -38,7 +38,7 @@ class MenuApp extends React.Component {
     }
     return (
       <div className="entryComponent" >
-      <h2 className="title">Menu</h2>
+      <h2 className="title" id='title'>Menu</h2>
         <MenuComponent menus={this.state.menus} />
       </div>
     );

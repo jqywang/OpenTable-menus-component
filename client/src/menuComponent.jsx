@@ -36,6 +36,7 @@ class MenuComponent extends React.Component {
         hidden: true,
         buttonName: 'Show Full Menu',
       });
+      document.getElementById('title').scrollIntoView({ block: 'end', behavior: 'smooth' });      
     }
   }
   render() {
